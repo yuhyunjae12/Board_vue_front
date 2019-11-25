@@ -4,8 +4,6 @@ import store from '../store'
 
 Vue.use(VueRouter)
 
-const token = localStorage.getItem('X-AUTH-TOKEN');
-
 const rejectAuthUser =(to, from, next) =>{
   if(store.state.isLogin === true){
     alert('이미 로그인 하였습니다.')
@@ -30,6 +28,7 @@ const rejectAuthUser =(to, from, next) =>{
 // 로컬 스토리지에 저장된 토큰여부로 수정 하였으나 .. 
 // 수정 필요..
 const onlyAuthUser =(to, from, next) =>{
+  const token = localStorage.getItem('X-AUTH-TOKEN');
   if(token == null){
     alert('로그인이 필요합니다.')
     next("/login")

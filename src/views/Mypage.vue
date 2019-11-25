@@ -114,7 +114,6 @@ export default {
             axios.put("/v1/user/", ParamsPost).then(res =>{
                 console.log(res);
                 this.$store.dispatch('logout')
-                this.$router.push({ name: "home" });
             })
             .catch(err =>{
             console.log(err);
