@@ -42,7 +42,7 @@
         <div class="pa-2">
           <v-btn
             icon
-            @click="getBoardList"
+            @click="searchBoard"
           >
           <v-icon>mdi-magnify</v-icon>
           </v-btn>
@@ -199,6 +199,10 @@ import axios from "axios"
         this.search = '';
         this.Keywordcolum = '';
 
+        this.getBoardList();
+      },
+      searchBoard(){
+        this.page = 1;
         this.getBoardList();
       }
     },
