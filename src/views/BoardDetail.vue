@@ -68,7 +68,9 @@ import axios from "axios"
           this.$router.push({ name: "boardModify", params: { postId: this.no } });
         },
         goDelete(){
-          axios.delete("/v1/board/post/" + this.no)
+          const deleteChk = confirm('삭제 하시겠습니까?');
+          if(deleteChk){
+            axios.delete("/v1/board/post/" + this.no)
                 .then(res =>{
                   console.log(res)
                   if(res.data.code == "-1006"){
@@ -81,6 +83,7 @@ import axios from "axios"
                 .catch(err =>{
                   console.log(err)
                 })
+            }
         }
     }
   }
