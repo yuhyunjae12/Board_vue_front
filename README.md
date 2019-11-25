@@ -1,6 +1,4 @@
-# front
-
-# test commit
+# Board_vue_front
 
 ## Project setup
 ```
@@ -24,4 +22,3 @@ yarn lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
-# Board-Vue-Front
